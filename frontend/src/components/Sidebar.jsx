@@ -26,7 +26,12 @@ export default function Sidebar() {
 
         <div className='overflow-y-auto w-full py-3'>
             <div className="overflow-y-auto w-full py-3">
-        {users.map((user) => (
+           
+            
+        { users && Array.isArray(users) &&
+        
+        users.map((user) => (
+           
           <button
             key={user._id}
             onClick={() => setSelectedUser(user)}
